@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaeilgoals</title>
+  <link rel="stylesheet" href="TryAgain6.css">
+<style>
+.grid-container {
+text-align:center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+background-color: lightgreen;
+  gap: 2vw;
+grid-gap: 5px;
+display: center;
+}
+
+.upload-btn {
+text-align:center;
+  width: 19.5vw;
+  height: 8.5vw;
+  padding: 0;
+  margin: 0;
+  appearance: none; 
+  background-color: #FFF;
+  border: none;
+  outline: none;
+background: black;
+font-size: 2;
+display: center;
+visibility: hidden;
+}
+
+.uploaded-img {
+text-align:center;
+display: center;
+  max-width: 95%;
+  max-height: 85%;
+}
+
+.child {
+text-align:center;
+margin: 0 auto;
+display: center;
+width: 100%;
+  background-color: green;
+  color: #FFF;
+  font-size: 1rem;
+max-width: 19.5vw;
+max-height: 8.5vw;
+}
+</style>
+<script>
+function handleUpload(buttonIndex) {
+  const fileInput = document.getElementById(`upload${buttonIndex}`);
+
+  // Check if a file is selected
+  if (fileInput.files && fileInput.files[0]) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      const uploadedImg = document.createElement("img");
+      uploadedImg.src = e.target.result;
+      uploadedImg.classList.add("uploaded-img");
+
+      // Replace the upload button with the uploaded image
+      const button = document.getElementById(`upload${buttonIndex}`);
+      button.parentNode.replaceChild(uploadedImg, button);
+    };
+
+    // Read the uploaded file as URL
+    reader.readAsDataURL(fileInput.files[0]);
+  }
+}
+
+</script>
+</head>
+
+
+
+<body>
+<center><h3>Gaeilgoals</h3></center>
+<center><h5>Cliceáil ar na ceannteidil chun ghrianghraf oiriúnach a uaslódáil. Nuair a bhfuil líne díreach trasna an bhord críochnaithe agat (bingo faighte agat), tóg screenshot agus roinn é!</h5></center>
+  <div class="grid-container">
+
+<div class="child">
+        <center><button><label   for="upload1">Damhsa  </label></button></center>
+        <input id="upload1" type="file" class="upload-btn" style="center" onchange="handleUpload(1)">
+</div>
+<div class="child">
+        <center><button><label  for="upload2">Taispeántas </label></button></center>
+        <input id="upload2" type="file" class="upload-btn" onchange="handleUpload(2)">
+</div>
+<div class="child">
+        <center><button><label  for="upload3">Pop-Up Gaeltacht </label></button></center>
+        <input id="upload3" type="file" class="upload-btn" onchange="handleUpload(3)">
+</div>
+<div class="child">
+        <center><button><label for="upload4">Turas chuig Gaeltacht</label></button></center>
+        <input id="upload4" type="file" class="upload-btn" onchange="handleUpload(4)">
+</div>
+<div class="child">
+        <center><button><label  for="upload5">Post Meáin Shóisialta </label></button></center>
+        <input id="upload5" type="file" class="upload-btn" onchange="handleUpload(5)">
+</div>
+<div class="child">
+        <center><button><label  for="upload6">TG4 </label></button></center>
+        <input id="upload6" type="file" class="upload-btn" onchange="handleUpload(6)">
+</div>
+<div class="child">
+        <center><button><label  for="upload7">Cluichí </label></button></center>
+        <input id="upload7" type="file" class="upload-btn" onchange="handleUpload(7)">
+</div>
+<div class="child">
+        <center><button><label  for="upload8">Scannán </label></button></center>
+        <input id="upload8" type="file" class="upload-btn" onchange="handleUpload(8)">
+</div>
+<div class="child">
+        <center><button><label  for="upload9">Siúlóid/Turas </label></button></center>
+        <input id="upload9" type="file" class="upload-btn" onchange="handleUpload(9)">
+</div>
+<div class="child">
+        <center><button><label for="upload10">Cabhair le Obair Bhaile</label></button></center>
+        <input id="upload10" type="file" class="upload-btn" onchange="handleUpload(10)">
+</div>
+<div class="child">
+        <center><button><label  for="upload11">Ceolchoirm </label></button></center>
+        <input id="upload11" type="file" class="upload-btn" onchange="handleUpload(11)">
+</div>
+<div class="child">
+        <center><button><label  for="upload12">Leabhar a léamh </label></button></center>
+        <input id="upload12" type="file" class="upload-btn" onchange="handleUpload(12)">
+</div>
+<div class="child">
+        <center><button><label  for="upload13">Ciorcal comhrá </label></button></center>
+        <input id="upload13" type="file" class="upload-btn" onchange="handleUpload(13)">
+</div>
+<div class="child">
+        <center><button><label  for="upload14">Rang/Léacht </label></button></center>
+        <input id="upload14" type="file" class="upload-btn" onchange="handleUpload(14)">
+</div>
+<div class="child">
+        <center><button><label  for="upload15">Spórt </label></button></center>
+        <input id="upload15" type="file" class="upload-btn" onchange="handleUpload(15)">
+</div>
+<div class="child">
+        <center><button><label  for="upload16">Dáta </label></button></center>
+        <input id="upload16" type="file" class="upload-btn" onchange="handleUpload(16)">
+</div>
+<div class="child">
+        <center><button><label  for="upload17">Féile </label></button></center>
+        <input id="upload17" type="file" class="upload-btn" onchange="handleUpload(17)">
+</div>
+<div class="child">
+        <center><button><label  for="upload18">Dráma/Seó </label></button></center>
+        <input id="upload18" type="file" class="upload-btn" onchange="handleUpload(18)">
+</div>
+<div class="child">
+        <center><button><label  for="upload19">Seisiúin Ceoil </label></button></center>
+        <input id="upload19" type="file" class="upload-btn" onchange="handleUpload(19)">
+</div>
+<div class="child">
+        <center><button><label  for="upload20">Scríobh </label></button></center>
+        <input id="upload20" type="file" class="upload-btn" onchange="handleUpload(20)">
+</div>
+<div class="child">
+        <center><button><label  for="upload21">Suíomh idirlíne a úsáid </label></button></center>
+        <input id="upload21" type="file" class="upload-btn" onchange="handleUpload(21)">
+</div>
+<div class="child">
+        <center><button><label  for="upload22">Ceardlann </label></button></center>
+        <input id="upload22" type="file" class="upload-btn" onchange="handleUpload(22)">
+</div>
+<div class="child">
+        <center><button><label  for="upload23">Rud éigin a ordú </label></button></center>
+        <input id="upload23" type="file" class="upload-btn" onchange="handleUpload(23)">
+</div>
+<div class="child">
+        <center><button><label  for="upload24">Yoga </label></button></center>
+        <input id="upload24" type="file" class="upload-btn" onchange="handleUpload(24)">
+</div>
+<div class="child">
+        <center><button><label  for="upload25">Comórtas </label></button></center>
+        <input id="upload25" type="file" class="upload-btn" onchange="handleUpload(25)">
+</div>
+
+  </div>
+
+  <script src="TryAgain6.js"></script>
+</body>
+</html>
