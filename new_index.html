@@ -1,0 +1,101 @@
+<!DOCTYPE html> <html>
+<head> 
+<title>Gaeilgoals</title> 
+
+<style>
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 5px; }
+.grid button { width: 100%; padding: 10px; background-color: green; color: #FFF; border: none; cursor: pointer; }
+.grid img { display: block; margin-left:auto; margin-right:auto; justify-content: center; margin-top: auto; margin-bottom: auto; max-width: 33vw; max-height: 25vh; width: auto; height: auto; }
+</style> 
+</head>
+
+<body>
+
+<center><h3>Gaeilgoals 1: Márta 2024</h3></center>
+<center><h4>Cliceáil ar na ceannteidil chun ghrianghraf oiriúnach uait a uaslódáil. Nuair atá an chlár lán, tóg screenshot agus roinn ar na meáin shóisialta é leis an haischlib #gaeilgoals.<br>
+Beidh spriocanna nua ann gach mí. Cláraigh leis an bhfoirm seo chun meabhrúchán agus nuachtlitir a fháil.
+</h4></center>
+
+
+<div class="grid">
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Cluiche / Spórt</button>
+<img class="image-preview">
+</div>
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Scannán / Teilifís</button>
+<img class="image-preview">
+</div>
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Siúlóid / Turas</button>
+<img class="image-preview">
+</div>
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Leabhar a léamh</button>
+<img class="image-preview">
+</div>
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Ciorcal comhrá / Pop-up Gaeltacht</button>
+<img class="image-preview">
+</div>
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Rang / Léacht</button>
+<img class="image-preview">
+</div>
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Siopadóireacht / Rud éigin a ordú</button>
+<img class="image-preview">
+</div>
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Seinnt / Éisteacht le ceol</button>
+<img class="image-preview">
+</div>
+
+<div>
+<input type="file" accept="image/*" class="file-input" style="display: none;">
+<button onclick="uploadImage(this)">Ríomhphost / Postáil ar na meáin shóisilata </button>
+<img class="image-preview">
+</div>
+
+</div>
+
+
+<script>
+    function uploadImage(button) {
+        var fileInput = button.previousElementSibling;
+        var image = button.nextElementSibling;
+
+        fileInput.onchange = function() {
+            var file = fileInput.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                image.src = e.target.result;
+                image.style.display = "block";
+            }
+
+            reader.readAsDataURL(file);
+        };
+
+        fileInput.click();
+    }
+</script>
+
+</body> </html>
+
